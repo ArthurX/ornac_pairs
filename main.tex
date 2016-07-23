@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{graphicx}
+\usepackage{ifpdf}
+\ifpdf
+   % put here packages only for the PDF:
+   \DeclareGraphicsExtensions{.pdf,.png,.jpg,.mps}
+   \usepackage{hyperref} 
+\else
+   % put here packages only for the DVI:
+\fi
+
+% put all the other packages here:
+
+\usepackage{mystyle}
+
+\begin{document}
+
+\input{./tex/title.tex}
+%\maketitle
+\tableofcontents
+%\listoffigures
+%\listoftables
+\input{./tex/abstract.tex}
+\input{./intro/introduction.tex}
+\input{./photon/photon.tex}
+\input{./quarksandmass/quarksandmass.tex}
+\input{./nuclearstructure/nuclearstructure.tex}
+\input{./halonuclea/halonuclea.tex}
+\input{./Feynman/Feynman.tex}
+\input{./gravity/gravity.tex}
+%\input{./conclusions/conclusions.tex}
+%\input{./summary/summary.tex}
+
+%\appendix
+%\input{./tex/myappendix.tex}
+
+
+% Bibliography:
+\clearpage
+\addcontentsline{toc}{chapter}{Bibliography}
+%\input{./tex/mybibliography.tex}
+
+\end{document}
