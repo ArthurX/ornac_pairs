@@ -15,6 +15,8 @@
 \bibitem[{\citenamefont{{Shapiro}}(1964)}]{Shapiro}
 \bibinfo{author}{\bibfnamefont{I.~I.} \bibnamefont{{Shapiro}}},
   \bibinfo{journal}{Physical Review Letters} \textbf{\bibinfo{volume}{13}},
-  \bibinfo{pages}{789} (\bibinfo{year}{1964}).
+  \bibinfo{pages}{789} (\bibinfo{year}{1964}),
+  \bibinfo{note}{\url{http://adsabs.harvard.edu/abs/1964PhRvL..13..789S},
+  \url{https://en.wikipedia.org/wiki/Shapiro_delay}}.
 
 \end{thebibliography}
