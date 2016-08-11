@@ -1,0 +1,119 @@
+
+\section{}
+\begin{tikzpicture}[scale=1, rotate=0]
+
+
+% photon vertical with speed vectors
+
+
+
+\path 
+(0,0) node[circle,draw, fill=red](x) {$-\frac{1}{3}$}
+(0,6) node[circle,draw, fill=blue](y) {$+\frac{1}{3}$};
+\draw[black] (x) -- (y)          node[pos=0.5](center){};
+\filldraw
+ (center) circle (2pt);
+\draw[->, black] (center) -- ++(1,0) node [anchor=west]{speed $c$};
+\draw[->, black] (y) -- ++(2,0) node [anchor=west]{speed $2c$};
+\draw[->, dotted] (x) -- ++(0.7,0) node [anchor=west]{speed $\emptyset$};
+
+\draw[->,dashed] (-5,4) to[out=60,in=180] (y);
+
+
+\end{tikzpicture}
+\section{}
+
+\begin{tikzpicture}[scale=1, rotate=0]
+
+
+% photon horizontal with speed vectors
+
+
+
+\path 
+(0,0) node[circle,draw, fill=red](red) {$-\frac{1}{3}$}
+(6,0) node[circle,draw, fill=blue](blue) {$+\frac{1}{3}$};
+\draw[black] (red) -- (blue)          node[pos=0.5](center){};
+\filldraw
+ (center) circle (2pt);
+%\draw[->, black] (center) -- ++(1,0) node [anchor=west]{};
+
+%% Arrows indicating the speed components from blue
+\draw[->, black, dashed] (blue) -- node[above] { $1c$} ++(2,0) node [](west){};
+\draw[->, black, dashed] (blue) -- node[left] { $1c$} ++(0,-2) node [](south){};
+\draw[ black, dotted] (west) -- ++(0,-2) node [](southwest){};
+\draw[ black, dotted] (south) -- (southwest) node []{};
+\draw[->, black] (blue) --  (southwest) node[below, right] { $1.4c$};
+
+%% Arrows indicating the speed components from red
+\draw[->, black, dashed] (red) -- node[above] { $1c$} ++(2,0) node [](redwest){};
+\draw[->, black, dashed] (red) -- node[left] { $1c$} ++(0,2) node [](redsouth){};
+\draw[ black, dotted] (redwest) -- ++(0,2) node [](redsouthwest){};
+\draw[ black, dotted] (redsouth) -- (redsouthwest) node []{};
+\draw[->, black] (red) --  (redsouthwest) node[below, right] { $1.4c$};
+
+
+
+
+\end{tikzpicture}
+
+\section{}
+
+\begin{tikzpicture}[scale=1, rotate=0]
+
+
+% photon diagonal with speed vectors
+
+
+
+\path 
+(0,4) node[circle,draw, fill=red](red) {$-\frac{1}{3}$}
+(4,0) node[circle,draw, fill=blue](blue) {$+\frac{1}{3}$};
+\draw[black] (red) -- (blue)          node[pos=0.5](center){};
+\filldraw
+ (center) circle (2pt);
+\draw[->,dashed, black] (center) -- node[above] { $1c$} ++(2,0) node [anchor=west]{};
+
+%% Arrows indicating the speed components from blue
+\draw[->, black, dashed] (blue) -- node[above] { $1c$} ++(2,0) node [](west){};
+\draw[->, black, dashed] (blue) -- node[left] { $1c$} ++(225:2) node [](south){};
+\draw[ black, dotted] (west) -- ++(225:2) node [](southwest){};
+\draw[ black, dotted] (south) -- (southwest) node []{};
+\draw[->, black] (blue) --  (southwest) node[below, right] { $0.76c$};
+
+%% Arrows indicating the speed components from red
+\draw[->, black, dashed] (red) -- node[above] { $1c$} ++(2,0) node [](redwest){};
+\draw[->, black, dashed] (red) -- node[left] { $1c$} ++(45:2) node [](redsouth){};
+\draw[ black, dotted] (redwest) -- ++(45:2) node [](redsouthwest){};
+\draw[ black, dotted] (redsouth) -- (redsouthwest) node []{};
+\draw[->, black] (red) --  (redsouthwest) node[below, right] { $1.84c$};
+
+
+
+
+\end{tikzpicture}
+
+
+\section{}
+
+\begin{tikzpicture}[scale=1, rotate=0]
+
+% photon going through cycloid cycle in colors
+ \foreach \x in {0, 0.05,...,1}
+  {
+  \definecolor{reddish}{hsb}{\x, 1, 1}
+  \draw[draw=none, fill=reddish] 
+   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.5];
+
+  }
+
+% Create the background in the circle, by drawing several slices
+% each with a constant color given by the angle (which is converted
+% to a color usin the hue, saturation and brightness color space).
+
+
+
+
+
+
+\end{tikzpicture}

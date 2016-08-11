@@ -1,8 +1,8 @@
-main.pdf
-main.aux
+*.pdf
+*.aux
 main.log
-main.out
-main.toc
+*.out
+*.toc
 *.log
 *.bbl
 *.blg
