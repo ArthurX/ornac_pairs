@@ -88,14 +88,10 @@
 \draw[ black, dotted] (redsouth) -- (redsouthwest) node []{};
 \draw[->, black] (red) --  (redsouthwest) node[below, right] { $1.84c$};
 
-
-
-
 \end{tikzpicture}
 
 
 \section{}
-
 \begin{tikzpicture}[scale=1, rotate=0]
 
 % photon going through cycloid cycle in colors
@@ -107,13 +103,148 @@
 
   }
 
-% Create the background in the circle, by drawing several slices
-% each with a constant color given by the angle (which is converted
-% to a color usin the hue, saturation and brightness color space).
+\end{tikzpicture}
+
+
+
+\section{}
+\begin{tikzpicture}[scale=1, rotate=0]
+
+% single ornac of a photon going through cycloid cycle in colors
+ \foreach \x in {0, 0.05,...,1}
+  {
+  \definecolor{reddish}{hsb}{\x, 1, 1}
+  \draw[black, fill=reddish] 
+   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.05];
+
+  }
+
+\end{tikzpicture}
+
+
+
+\section{}
+\begin{tikzpicture}[scale=1, rotate=0]
+
+% single ornac of a photon  going through two cycloid cycle in red
+
+%% red ornac
+ \foreach \x in {0, 0.05,...,2}
+  {
+  
+  \draw[black, fill=red] 
+   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.05];
+
+  }
+
+\path
+(3*pi,0) node (bottom){};
+
+\draw[<-, thick] (bottom) -- ++(1,-1) node (slowspeed){}; 
+\path
+(slowspeed) node [anchor=west, align=right]{slowest speed = $\emptyset$};
+
+\end{tikzpicture}
 
 
 
 
+\section{}
+\begin{tikzpicture}[scale=1, rotate=0]
 
+% single ornac of a photon  going through two cycloid cycle in red
+% with green oval to indicate the under c area
+
+% greeen oval
+\path
+(pi,0) node (bottom1){}
+(3*pi,0) node (bottom2){};
+\draw [draw = none, fill = green]
+ (bottom1) circle [ x radius = 0.4, y radius = 1 ]
+ (bottom2) circle [ x radius = 0.4, y radius = 1 ]node (greenoval) {};
+
+\draw[<-, thick] (greenoval)+(0.4,-0.4) -- ++(2,-2) node (slowspeed){}; 
+\path
+(slowspeed) node [below right , align=right]
+{green oval \\ indicates area \\ with  speed bellow $c$};
+
+
+%% red ornac
+ \foreach \x in {0, 0.05,...,2}
+  {
+    \draw[black, fill=red] 
+   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.05];
+  }
+
+
+\end{tikzpicture}
+
+
+
+\section{}
+\begin{tikzpicture}[scale=1, rotate=0]
+
+% two ornac of a photon  going through two cycloid cycle in red
+
+%% red ornac
+ \foreach \x in {0, 0.05,...,2}
+  {
+    \draw[black, fill=red] 
+   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.05];
+  }
+
+
+%% blue ornac
+ \foreach \x in {0, 0.05,...,2}
+  {
+    \draw[black, fill=blue] 
+   ({((2*pi*\x + sin((2*pi*\x -pi) r)) },{1 + cos((2*pi*\x -pi) r) }) circle [radius=0.05];
+  }
+
+\end{tikzpicture}
+
+
+\section{}
+\begin{tikzpicture}[scale=1, rotate=0]
+
+% two ornac of a photon  going through two cycloid cycle in red and blue
+% with green oval to indicate the under c area
+
+% greeen ovals
+ \foreach \p in {1,...,3}
+    \draw [draw = none, fill = green]
+     (pi*\p,0) circle [ x radius = 0.4, y radius = 1 ];
+
+\path
+(3*pi,0) node (greenoval) {};
+\draw[<-, thick] (greenoval)+(0.4,-0.4) -- ++(2,-2) node (slowspeed){}; 
+\path
+(slowspeed) node [below right , align=right]
+{green oval \\ indicates area \\ with  speed bellow $c$};
+
+\path
+(1*pi,0) node (greenoval1) {}
+(2*pi,0) node (greenoval2) {};
+\draw[<-, thick] (greenoval1)+(0.4,-0.4) -- (1.5*pi,-2) node (alternatingly){}; 
+\draw[<-, thick] (greenoval2)+(-0.4,-0.4) -- (1.5*pi,-2) node {}; 
+\path
+(alternatingly) node [below , align=center]
+{positive and negative charges \\ come  \textbf{alternatingly} in the \\ window of perception};
+
+
+%% red ornac
+ \foreach \x in {0, 0.05,...,2}
+  {
+    \draw[black, fill=red] 
+   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.05];
+  }
+
+
+%% blue ornac
+ \foreach \x in {0, 0.05,...,2}
+  {
+    \draw[black, fill=blue] 
+   ({((2*pi*\x + sin((2*pi*\x -pi) r)) },{1 + cos((2*pi*\x -pi) r) }) circle [radius=0.05];
+  }
 
 \end{tikzpicture}
