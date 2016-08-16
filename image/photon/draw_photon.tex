@@ -1,5 +1,5 @@
 
-\section{}
+\section{Photon vertical with speed vectors}
 \begin{tikzpicture}[scale=1, rotate=0]
 
 % photon vertical with speed vectors
@@ -19,11 +19,12 @@
 \end{tikzpicture}
 
 
-\section{}
+\section{Photon vertical with green and yellow area for \\
+ sub and hyper c  indication speed}
 \begin{tikzpicture}[scale=1, rotate=0]
 
 % photon vertical with green and yellow area for 
-% sub and hyper c  indication speed vectors
+% sub and hyper c  indication speed 
 
 \filldraw[fill=yellow, draw=black] (0,0) -- (60:6) 
 node[pos=0.75, ](yellow) {} 
@@ -64,7 +65,7 @@ visible to all};
 
 
 
-\section{}
+\section{Photon horizontal with speed vectors}
 \begin{tikzpicture}[scale=1, rotate=0]
 
 
@@ -99,7 +100,7 @@ visible to all};
 
 \end{tikzpicture}
 
-\section{}
+\section{Photon diagonal with speed vectors}
 
 \begin{tikzpicture}[scale=1, rotate=0]
 
@@ -133,7 +134,7 @@ visible to all};
 \end{tikzpicture}
 
 
-\section{}
+\section{Photon going through cycloid cycle in colors}
 \begin{tikzpicture}[scale=1, rotate=0]
 
 % photon going through cycloid cycle in colors
@@ -145,27 +146,78 @@ visible to all};
 
   }
 
+ \foreach \x in {0, 0.05,...,1}
+  {
+  \definecolor{reddish}{hsb}{\x, 1, 1}
+  \draw[draw=none, fill=reddish] 
+   ({((2*pi + 2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.5];
+  }
+
+\path
+(2*pi,2) node (topdoublespeed) {}
+(3*pi,0) node (deadbottom2) {};
+\draw[<-, thick] (topdoublespeed) +(0.5, 0.5) -- ++(2,2) node (topdoublespeedtext){}; 
+\draw[<-, thick] (deadbottom2)+(0.4,-0.4) -- ++(2,-2) node (deadbottomtext) {}; 
+\path
+(topdoublespeedtext) node [anchor=south west,  align=right]
+{\textbf{TopDoubleSpeed} \\
+The speed is max. \\ 
+The speed is double the average. \\
+Red indicates high speed.};
+\path
+(deadbottomtext) node [below , align=right]
+{\textbf{DeadBottom} \\
+The direction of movement is reversed. \\  
+There is a slight moment of zero speed. \\
+Turquoise blue indicates the low speed.};
+
+
 \end{tikzpicture}
 
 
 
-\section{}
+\section{Cycloid cycle in colors single ornac of a photon \\ with wheel}
 \begin{tikzpicture}[scale=1, rotate=0]
 
 % single ornac of a photon going through cycloid cycle in colors
+
  \foreach \x in {0, 0.05,...,1}
   {
   \definecolor{reddish}{hsb}{\x, 1, 1}
   \draw[black, fill=reddish] 
-   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.05];
+   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.09];
+  }
+% second cycle
+ \foreach \x in {0, 0.05,...,1}
+  {
+  \definecolor{reddish}{hsb}{\x, 1, 1}
+  \draw[black, fill=reddish] 
+   ({((2*pi + 2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.09];
+  }
 
+
+% wheel
+\path
+(0,1) node (hub) {};
+\draw[black, thick]
+(hub) circle[radius=1];
+% arrow
+
+%\draw[->, thick]
+%(hub)++(215:1.5) arc  (315:225:1.5);
+% spokes
+ \foreach \phi in {0, 0.1,...,1}
+  {
+%  \definecolor{reddish}{hsb}{\x, 1, 1}
+  \draw[black, thick] 
+   (hub)-- ++(360*\phi :1);
   }
 
 \end{tikzpicture}
 
 
 
-\section{}
+\section{Single ornac of a photon  going through two cycloid cycle in red}
 \begin{tikzpicture}[scale=1, rotate=0]
 
 % single ornac of a photon  going through two cycloid cycle in red
@@ -191,7 +243,8 @@ visible to all};
 
 
 
-\section{}
+\section{Single ornac of a photon  going through two cycloid cycle in red
+ with green oval to indicate the under c area}
 \begin{tikzpicture}[scale=1, rotate=0]
 
 % single ornac of a photon  going through two cycloid cycle in red
@@ -223,7 +276,7 @@ visible to all};
 
 
 
-\section{}
+\section{Two ornac of a photon  going through two cycloid cycle in red}
 \begin{tikzpicture}[scale=1, rotate=0]
 
 % two ornac of a photon  going through two cycloid cycle in red
@@ -246,7 +299,8 @@ visible to all};
 \end{tikzpicture}
 
 
-\section{}
+\section{Two ornac of a photon  going through two cycloid cycle in red and blue
+ with green oval to indicate the under c area}
 \begin{tikzpicture}[scale=1, rotate=0]
 
 % two ornac of a photon  going through two cycloid cycle in red and blue
