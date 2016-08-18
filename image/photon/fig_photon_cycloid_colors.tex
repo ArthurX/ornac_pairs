@@ -1,0 +1,42 @@
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
+
+% photon going through cycloid cycle in colors
+ \foreach \x in {0, 0.05,...,1}
+  {
+  \definecolor{reddish}{hsb}{\x, 1, 1}
+  \draw[draw=none, fill=reddish] 
+   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.5];
+
+  }
+
+ \foreach \x in {0, 0.05,...,1}
+  {
+  \definecolor{reddish}{hsb}{\x, 1, 1}
+  \draw[draw=none, fill=reddish] 
+   ({((2*pi + 2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.5];
+  }
+
+\path
+(2*pi,2) node (topdoublespeed) {}
+(3*pi,0) node (deadbottom2) {};
+\draw[<-, thick] (topdoublespeed) +(0.5, 0.5) -- ++(2,2) node (topdoublespeedtext){}; 
+\draw[<-, thick] (deadbottom2)+(0.4,-0.4) -- ++(2,-2) node (deadbottomtext) {}; 
+\path
+(topdoublespeedtext) node [anchor=south west,  align=right]
+{\textbf{TopDoubleSpeed} \\
+Red indicates the highest speed.\\
+The maximum speed is double the average. \\
+};
+\path
+(deadbottomtext) node [below , align=right]
+{\textbf{DeadBottom} \\
+Turquoise blue indicates the slowest speed.\\
+The direction of movement is reversed. \\  
+There is a slight moment of zero speed. \\
+};
+
+
+\end{tikzpicture}\caption{A single photon sub-particle, ornac, going through cycloid cycle in colors
+\label{fig:photon_cycloid_colors}}
+\end{figure}
+

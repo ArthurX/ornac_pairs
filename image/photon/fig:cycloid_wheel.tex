@@ -1,0 +1,39 @@
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
+
+% single ornac of a photon going through cycloid cycle in colors
+
+ \foreach \x in {0, 0.05,...,1}
+  {
+  \definecolor{reddish}{hsb}{\x, 1, 1}
+  \draw[black, fill=reddish] 
+   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.09];
+  }
+% second cycle
+ \foreach \x in {0, 0.05,...,1}
+  {
+  \definecolor{reddish}{hsb}{\x, 1, 1}
+  \draw[black, fill=reddish] 
+   ({((2*pi + 2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.09];
+  }
+
+
+% wheel
+\path
+(0,1) node (hub) {};
+\draw[black, thick]
+(hub) circle[radius=1];
+% arrow
+
+%\draw[->, thick]
+%(hub)++(215:1.5) arc  (315:225:1.5);
+% spokes
+ \foreach \phi in {0, 0.1,...,1}
+  {
+%  \definecolor{reddish}{hsb}{\x, 1, 1}
+  \draw[black, thick] 
+   (hub)-- ++(360*\phi :1);
+  }
+
+\end{tikzpicture}\caption{Cycloid cycle in colors single ornac of a photon with wheel
+\label{fig:cycloid_wheel}}
+\end{figure}

@@ -1,0 +1,23 @@
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
+
+% single ornac of a photon  going through two cycloid cycle in red
+
+%% red ornac
+ \foreach \x in {0, 0.05,...,2}
+  {
+  
+  \draw[black, fill=red] 
+   ({((2*pi*\x + sin(2*pi*\x r)) },{1 + cos(2*pi*\x r) }) circle [radius=0.05];
+
+  }
+
+\path
+(3*pi,0) node (bottom){};
+
+\draw[<-, thick] (bottom) -- ++(1,-1) node (slowspeed){}; 
+\path
+(slowspeed) node [anchor=west, align=right]{Slowest speed = $\emptyset$.};
+
+\end{tikzpicture}\caption{Single ornac of a photon  going through two cycloid cycle in red
+\label{fig:photon_red_ornac}}
+\end{figure}

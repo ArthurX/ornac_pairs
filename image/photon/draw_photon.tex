@@ -1,6 +1,6 @@
 
 \section{Photon vertical with speed vectors}
-\begin{tikzpicture}[scale=1, rotate=0]
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
 
 % photon vertical with speed vectors
 
@@ -17,11 +17,14 @@
 \draw[->,dashed] (-5,4) to[out=60,in=180] (blue);
 
 \end{tikzpicture}
+\caption{Photon vertical with speed vectors 
+\label{fig:photon_vertical}}
+\end{figure}
 
 
 \section{Photon vertical with green and yellow area for \\
  sub and hyper c  indication speed}
-\begin{tikzpicture}[scale=1, rotate=0]
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
 
 % photon vertical with green and yellow area for 
 % sub and hyper c  indication speed 
@@ -61,12 +64,15 @@ visible to all};
 
 
 
-\end{tikzpicture}
+\end{tikzpicture}\caption{Photon vertical with green and yellow area for \\
+ sub and hyper c  indication speed 
+\label{fig:photon_green_yellow}}
+\end{figure}
 
 
 
 \section{Photon horizontal with speed vectors}
-\begin{tikzpicture}[scale=1, rotate=0]
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
 
 
 % photon horizontal with speed vectors
@@ -84,25 +90,29 @@ visible to all};
 %% Arrows indicating the speed components from blue
 \draw[->, black, dashed] (blue) -- node[above] { $1c$} ++(2,0) node [](west){};
 \draw[->, black, dashed] (blue) -- node[left] { $1c$} ++(0,-2) node [](south){};
-\draw[ black, dotted] (west) -- ++(0,-2) node [](southwest){};
-\draw[ black, dotted] (south) -- (southwest) node []{};
-\draw[->, black] (blue) --  (southwest) node[below, right] { $1.4c$};
+\path (west) -- ++(0,-2) node [](southwest){};
+%\draw[ black, dotted] (west) -- ++(0,-2) node [](southwest){};
+%\draw[ black, dotted] (south) -- (southwest) node []{};
+\draw[->, black, thick] (blue) --  (southwest) node[below, right] { $1.4c$};
 
 %% Arrows indicating the speed components from red
 \draw[->, black, dashed] (red) -- node[above] { $1c$} ++(2,0) node [](redwest){};
 \draw[->, black, dashed] (red) -- node[left] { $1c$} ++(0,2) node [](redsouth){};
-\draw[ black, dotted] (redwest) -- ++(0,2) node [](redsouthwest){};
-\draw[ black, dotted] (redsouth) -- (redsouthwest) node []{};
-\draw[->, black] (red) --  (redsouthwest) node[below, right] { $1.4c$};
+\path(redwest) -- ++(0,2) node [](redsouthwest){};
+%\draw[ black, dotted] (redwest) -- ++(0,1.5) node []{};
+%\draw[ black, dotted] (redsouth) -- ++(1.5,0) node []{};
+\draw[->, black, thick] (red) --  (redsouthwest) node[below, right] { $1.4c$};
 
 
 
 
-\end{tikzpicture}
+\end{tikzpicture}\caption{Photon horizontal with speed vectors
+\label{fig:photon_horizontal}}
+\end{figure}
 
 \section{Photon diagonal with speed vectors}
 
-\begin{tikzpicture}[scale=1, rotate=0]
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
 
 
 % photon diagonal with speed vectors
@@ -122,20 +132,24 @@ visible to all};
 \draw[->, black, dashed] (blue) -- node[left] { $1c$} ++(225:2) node [](south){};
 \draw[ black, dotted] (west) -- ++(225:2) node [](southwest){};
 \draw[ black, dotted] (south) -- (southwest) node []{};
-\draw[->, black] (blue) --  (southwest) node[below, right] { $0.76c$};
+\draw[->, black, thick] (blue) --  (southwest) node (under_c) {};
+\path
+(under_c)+(0.4,0)node [fill=red!20,draw, rounded corners, right]
+{ $0.76c < c \Rightarrow$ blue ornac becomes visible here};
 
 %% Arrows indicating the speed components from red
 \draw[->, black, dashed] (red) -- node[above] { $1c$} ++(2,0) node [](redwest){};
 \draw[->, black, dashed] (red) -- node[left] { $1c$} ++(45:2) node [](redsouth){};
 \draw[ black, dotted] (redwest) -- ++(45:2) node [](redsouthwest){};
 \draw[ black, dotted] (redsouth) -- (redsouthwest) node []{};
-\draw[->, black] (red) --  (redsouthwest) node[below, right] { $1.84c$};
+\draw[->, black, thick] (red) --  (redsouthwest) node [below, right] { $1.84c$};
 
-\end{tikzpicture}
+\end{tikzpicture}\caption{Photon diagonal with speed vectors\label{fig:photon-diagonal}}
+\end{figure}
 
 
 \section{Photon going through cycloid cycle in colors}
-\begin{tikzpicture}[scale=1, rotate=0]
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
 
 % photon going through cycloid cycle in colors
  \foreach \x in {0, 0.05,...,1}
@@ -161,23 +175,26 @@ visible to all};
 \path
 (topdoublespeedtext) node [anchor=south west,  align=right]
 {\textbf{TopDoubleSpeed} \\
-The speed is max. \\ 
-The speed is double the average. \\
-Red indicates high speed.};
+Red indicates the highest speed.\\
+The maximum speed is double the average. \\
+};
 \path
 (deadbottomtext) node [below , align=right]
 {\textbf{DeadBottom} \\
+Turquoise blue indicates the slowest speed.\\
 The direction of movement is reversed. \\  
 There is a slight moment of zero speed. \\
-Turquoise blue indicates the low speed.};
+};
 
 
-\end{tikzpicture}
+\end{tikzpicture}\caption{Photon going through cycloid cycle in colors
+\label{fig:photon_cycloid_colors}}
+\end{figure}
 
 
 
 \section{Cycloid cycle in colors single ornac of a photon \\ with wheel}
-\begin{tikzpicture}[scale=1, rotate=0]
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
 
 % single ornac of a photon going through cycloid cycle in colors
 
@@ -213,12 +230,14 @@ Turquoise blue indicates the low speed.};
    (hub)-- ++(360*\phi :1);
   }
 
-\end{tikzpicture}
+\end{tikzpicture}\caption{Cycloid cycle in colors single ornac of a photon with wheel
+\label{fig:cycloid_wheel}}
+\end{figure}
 
 
 
 \section{Single ornac of a photon  going through two cycloid cycle in red}
-\begin{tikzpicture}[scale=1, rotate=0]
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
 
 % single ornac of a photon  going through two cycloid cycle in red
 
@@ -236,16 +255,18 @@ Turquoise blue indicates the low speed.};
 
 \draw[<-, thick] (bottom) -- ++(1,-1) node (slowspeed){}; 
 \path
-(slowspeed) node [anchor=west, align=right]{slowest speed = $\emptyset$};
+(slowspeed) node [anchor=west, align=right]{Slowest speed = $\emptyset$.};
 
-\end{tikzpicture}
+\end{tikzpicture}\caption{Single ornac of a photon  going through two cycloid cycle in red
+\label{fig:photon_red_ornac}}
+\end{figure}
 
 
 
 
 \section{Single ornac of a photon  going through two cycloid cycle in red
  with green oval to indicate the under c area}
-\begin{tikzpicture}[scale=1, rotate=0]
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
 
 % single ornac of a photon  going through two cycloid cycle in red
 % with green oval to indicate the under c area
@@ -261,7 +282,7 @@ Turquoise blue indicates the low speed.};
 \draw[<-, thick] (greenoval)+(0.4,-0.4) -- ++(2,-2) node (slowspeed){}; 
 \path
 (slowspeed) node [below right , align=right]
-{green oval \\ indicates area \\ with  speed bellow $c$};
+{Green oval \\ indicates area \\ with  speed bellow $c$.};
 
 
 %% red ornac
@@ -272,12 +293,15 @@ Turquoise blue indicates the low speed.};
   }
 
 
-\end{tikzpicture}
+\end{tikzpicture}\caption{Single ornac of a photon  going through two cycloid cycle in red
+ with green oval to indicate the under c area
+\label{fig:photon_red_ornac_green_area}}
+\end{figure}
 
 
 
-\section{Two ornac of a photon  going through two cycloid cycle in red}
-\begin{tikzpicture}[scale=1, rotate=0]
+\section{Two ornac of a photon  going through two cycloid cycle in red and blue}
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
 
 % two ornac of a photon  going through two cycloid cycle in red
 
@@ -297,11 +321,14 @@ Turquoise blue indicates the low speed.};
   }
 
 \end{tikzpicture}
+\caption{Two ornac of a photon  going through two cycloid cycle in red and blue
+\label{fig:two_ornac_cycloid}}
+\end{figure}
 
 
 \section{Two ornac of a photon  going through two cycloid cycle in red and blue
  with green oval to indicate the under c area}
-\begin{tikzpicture}[scale=1, rotate=0]
+\begin{figure}\begin{tikzpicture}[scale=1, rotate=0]
 
 % two ornac of a photon  going through two cycloid cycle in red and blue
 % with green oval to indicate the under c area
@@ -316,7 +343,7 @@ Turquoise blue indicates the low speed.};
 \draw[<-, thick] (greenoval)+(0.4,-0.4) -- ++(2,-2) node (slowspeed){}; 
 \path
 (slowspeed) node [below right , align=right]
-{green oval \\ indicates area \\ with  speed bellow $c$};
+{Green oval \\ indicates area \\ with  speed bellow $c$.};
 
 \path
 (1*pi,0) node (greenoval1) {}
@@ -325,7 +352,9 @@ Turquoise blue indicates the low speed.};
 \draw[<-, thick] (greenoval2)+(-0.4,-0.4) -- (1.5*pi,-2) node {}; 
 \path
 (alternatingly) node [below , align=center]
-{positive and negative charges \\ come  \textbf{alternatingly} in the \\ window of perception};
+{Positive and negative charges \\ 
+come  \textbf{alternatingly} in the \\ 
+window of perception.};
 
 
 %% red ornac
@@ -343,4 +372,9 @@ Turquoise blue indicates the low speed.};
    ({((2*pi*\x + sin((2*pi*\x -pi) r)) },{1 + cos((2*pi*\x -pi) r) }) circle [radius=0.05];
   }
 
-\end{tikzpicture}
+\end{tikzpicture}\caption{Two ornac of a photon  going through two cycloid cycle in red and blue
+ with green oval to indicate the under c area
+\label{fig:two_ornac_cycloid_green_area}}
+\end{figure}
+
+
