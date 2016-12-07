@@ -6,44 +6,44 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ./bib/arthurx.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 1 entry,
+You've used 2 entries,
             3411 wiz_defined-function locations,
-            1161 strings with 10212 characters,
-and the built_in function-call counts, 571 in all, are:
-= -- 35
-> -- 7
-< -- 2
-+ -- 4
-- -- 2
-* -- 66
-:= -- 73
-add.period$ -- 1
-call.type$ -- 1
-change.case$ -- 5
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 51
-empty$ -- 50
-format.name$ -- 5
-if$ -- 103
+            1168 strings with 10423 characters,
+and the built_in function-call counts, 1096 in all, are:
+= -- 70
+> -- 14
+< -- 4
++ -- 8
+- -- 4
+* -- 130
+:= -- 137
+add.period$ -- 2
+call.type$ -- 2
+change.case$ -- 10
+chr.to.int$ -- 2
+cite$ -- 2
+duplicate$ -- 102
+empty$ -- 99
+format.name$ -- 10
+if$ -- 205
 int.to.chr$ -- 1
-int.to.str$ -- 2
-missing$ -- 9
-newline$ -- 18
-num.names$ -- 3
-pop$ -- 11
+int.to.str$ -- 3
+missing$ -- 18
+newline$ -- 21
+num.names$ -- 6
+pop$ -- 22
 preamble$ -- 1
-purify$ -- 4
+purify$ -- 8
 quote$ -- 0
-skip$ -- 20
+skip$ -- 39
 stack$ -- 0
-substring$ -- 23
-swap$ -- 37
-text.length$ -- 1
+substring$ -- 46
+swap$ -- 74
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 12
 warning$ -- 0
-while$ -- 3
+while$ -- 6
 width$ -- 0
-write$ -- 25
+write$ -- 36
