@@ -1,0 +1,19 @@
+% Show magnetic field lines by using electric dipoles
+
+% Proton
+%\newcommand{\upquark}[1] { [1.5 0 (#1 + 0.2)] [-1.5 0 (#1 -0.2)] }
+
+\begin{pspicture*}(-6,-6)(6,6)
+\psframe*[linecolor=white!50](-6,-6)(6,6)
+\psgrid[subgriddiv=0,gridcolor=gray,griddots=10]
+\psElectricfield[Q={
+                    [-1 0 4]         % Upper quark
+                    [1 0 3]
+                    [1.5 0 0.5]      % Middle quark
+                    [-1.5 0 -0.5]        
+                    [-1 0 -3]        % Lower quark
+                    [1  0 -4]
+                    },linecolor=red]
+%\psEquipotential[Q={[-1 -2 2][1 2 2][-1 2 -2][1 -2 -2]},linecolor=blue](-6.1,-6.1)(6.1,6.1)
+%\psEquipotential[Q={[-1 -2 2][1 2 2][-1 2 -2][1 -2 -2]},linecolor=green,linewidth=2\pslinewidth,Vmax=0,Vmin=0](-6.1,-6.1)(6.1,6.1)
+\end{pspicture*}
